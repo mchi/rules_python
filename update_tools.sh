@@ -16,6 +16,6 @@
 
 set -euo pipefail
 
-bazel build //rules_python:piptool.par //rules_python:whltool.par
+bazel build //rules_python:piptool.par //rules_python:whltool.par --force_python=PY3 --python_path=/usr/bin/python3
 cp bazel-bin/rules_python/piptool.par tools/piptool.par
 cp bazel-bin/rules_python/whltool.par tools/whltool.par

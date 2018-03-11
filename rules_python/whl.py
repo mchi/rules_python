@@ -18,6 +18,7 @@ import json
 import os
 import pkg_resources
 import re
+import sys
 import zipfile
 
 
@@ -113,7 +114,7 @@ class Wheel(object):
 
 
 parser = argparse.ArgumentParser(
-    description='Unpack a WHL file as a py_library.')
+    description='Unpack a WHL file as a py_library [Python {}]'.format(sys.version))
 
 parser.add_argument('--whl', action='store',
                     help=('The .whl file we are expanding.'))
